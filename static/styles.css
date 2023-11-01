@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #009688;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+.left, .middle, .right {
+    flex: 1;
+    padding: 1em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    background-color: white;
+    margin: 1em;
+}
+
+.left h2, .middle h2, .right h2 {
+    color: #009688;
+}
+
+label, select, textarea {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.section {
+    margin-bottom: 1em;
+}

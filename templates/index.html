@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IvyLeague.AI - College Essay Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>Clubs & Classes & Research</h1>
+    </div>
+
+    <div class="container">
+        <!-- Left Column -->
+        <div class="left">
+            <h2>Input</h2>
+            <form id="essayForm">
+                <label for="resume">Paste Your Resume:</label><br>
+                <textarea id="resume" name="resume"></textarea><br>
+                <label for="interests">Your Interests:</label><br>
+                <textarea id="interests" name="interests"></textarea><br>
+                <label for="draft">Draft Essay:</label><br>
+                <textarea id="draft" name="draft"></textarea><br>
+                <button type="button" id="submitBtn">Submit</button>
+                <button type="button" onclick="generateEssay()">Generate Essay</button>
+
+            </form>
+        </div>
+
+        <!-- Middle Column -->
+        <div class="middle">
+            <h2>Essay Generator</h2>
+            <select id="school" name="school" onchange="updatePromptOptions()">
+                <option value="Boston College">Boston College</option>
+                <option value="Yale University">Yale University</option>
+            </select>
+            
+            
+
+            <select id="prompt" name="prompt">
+                <!-- Options populated based on selected school -->
+            </select>
+
+            <div id="output">
+                <!-- Generated essay will appear here -->
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right">
+            <div class="section">
+                <h2>Clubs</h2>
+                <!-- Recommended clubs will appear here -->
+            </div>
+            <div class="section">
+                <h2>Classes</h2>
+                <!-- Recommended classes will appear here -->
+            </div>
+            <div class="section">
+                <h2>Research</h2>
+                <!-- Recommended research opportunities will appear here -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
